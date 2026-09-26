@@ -6,7 +6,7 @@ import {
   type UserConfig,
   type UserConfigExport,
 } from 'vite';
-import upstreamConfig from './vite.config';
+import upstreamConfig from './vite.config.ts';
 
 const BM_WORLD_BASE = '/modules/world/';
 const PWA_PLUGIN_PREFIX = 'vite-plugin-pwa';
