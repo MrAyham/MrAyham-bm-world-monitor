@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: bm-world-monitor
+    runtime: docker
+    plan: free
+    region: ohio
+    repo: https://github.com/MrAyham/MrAyham-bm-world-monitor.git
+    branch: bm/integration
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/sidecar-health
+    envVars:
+      - key: WM_SESSION_SECRET
+        generateValue: true
+      - key: VITE_BM_SHELL_URL
+        sync: false
